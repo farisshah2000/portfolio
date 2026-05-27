@@ -1,0 +1,86 @@
+/*RESET*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*Body*/
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color:#333;
+    line-height: 1.6;
+}
+
+nav{
+    background-color: #111827;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+nav a:hover{
+    color:#60a5fa;
+}
+
+/*Hero*/
+header{
+    background-color: #1f2937;
+    color:white;
+    text-align: center;
+    padding:100px 20px
+}
+header h1{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+section{
+    background-color: white;
+    margin:30px auto;
+    padding: 30px;
+    width:80%;
+    border-radius:10px;
+}
+h2{
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+section div{
+    background-color: #f9fafb;
+    margin-top: 15px;
+    padding: 20px;
+    border-left: 5px solid #2563eb;
+    border-radius:5px;
+}
+
+#contact a {
+    display:inline-block;
+    margin-top:10px;
+    text-decoration: none;
+    color: white;
+    background-color: #2563eb;
+    padding: 10px 15px;
+    border-radius: 50px;
+
+}
+
+#contact a:hover{
+    background-color: #1d4ed8;
+}
+
