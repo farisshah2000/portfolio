@@ -5,12 +5,17 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /*Body*/
 body{
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color:#333;
     line-height: 1.6;
+    padding-bottom: 50px;
 }
 
 nav{
@@ -19,6 +24,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 20px 40px;
 
 }
@@ -53,7 +59,7 @@ section{
     background-color: white;
     margin:30px auto;
     padding: 30px;
-    width:80%;
+    width:min(90%, 1000px);
     border-radius:10px;
 }
 h2{
@@ -67,6 +73,10 @@ section div{
     padding: 20px;
     border-left: 5px solid #2563eb;
     border-radius:5px;
+    transition: transform 0.3s ease;
+}
+section div:hover{
+    transform: translateY(-5px);
 }
 
 #contact a {
@@ -84,3 +94,21 @@ section div{
     background-color: #1d4ed8;
 }
 
+
+@media (max-width: 768px){
+    nav{
+        flex-direction:column;
+        gap: 15px;
+    }
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    section{
+        padding:20px;
+    }
+
+}
