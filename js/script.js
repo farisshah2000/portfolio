@@ -10,3 +10,10 @@ themeButton.addEventListener("click", function () {
     }
 
 });
+
+const hamburgerButton = document.getElementById("hamburger-menu");
+const navLinks = document.querySelector("nav ul");
+hamburgerButton.addEventListener("click", function(){
+    navLinks.classList.toggle("show");
+
+});
