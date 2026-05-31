@@ -11,7 +11,7 @@ html{
 
 /*Body*/
 body{
-    font-family: Arial, sans-serif;
+    font-family: system-ui, sans-serif;
     background-color: #f4f4f4;
     color:#333;
     line-height: 1.6;
@@ -26,6 +26,10 @@ nav{
     align-items:center;
     flex-wrap: wrap;
     padding: 20px 40px;
+    position: sticky;
+    top:0;
+    z-index:1000;
+
 
 }
 
@@ -48,7 +52,12 @@ header{
     background-color: #1f2937;
     color:white;
     text-align: center;
-    padding:100px 20px
+    padding:100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 header h1{
     font-size: 3rem;
@@ -87,11 +96,13 @@ section div:hover{
     background-color: #2563eb;
     padding: 10px 15px;
     border-radius: 50px;
+    transition: all 0.3s ease;
 
 }
 
 #contact a:hover{
     background-color: #1d4ed8;
+    transform: translateY(-2px)
 }
 
 #theme-button{
@@ -134,6 +145,21 @@ section div:hover{
     cursor: pointer;
 }
 
+p{
+    max-width:70ch;
+}
+
+
+.hidden{
+    opacity: 0;
+    transform:translateY(30px);
+    transition: all 1s ease;
+}
+
+.show{
+    opacity: 1;
+    transform:translateY(0);
+}
 
 
 

@@ -41,3 +41,17 @@ projects.forEach(function(project){
     projectContainer.appendChild(projectCard);
 
 });
+
+const hiddenElements = document.querySelectorAll(".hidden");
+const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+        if (entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+
+    });
+
+});
+hiddenElements.forEach(function(element){
+    observer.observe(element);
+});
