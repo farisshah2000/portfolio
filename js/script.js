@@ -32,7 +32,7 @@ typeEffect();
 
 const projects = [{title:"SmartScan",description:"A desktop document scanner"},
     {title:"Rendezvous",description:"A large group coordination app"}, {title:"Sortify",description:"A spotify tool to sort songs based on desired genres"},
-    {title:"TrailBack",description:"Offline hiking navigation app"}];
+    {title:"British Columbia Trails",description:"An app for outdoor/hiking enthusiastes"}];
 
 const projectContainer = document.getElementById("project-container");
 projects.forEach(function(project){
