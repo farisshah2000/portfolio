@@ -31,7 +31,8 @@ function typeEffect(){
 typeEffect();
 
 const projects = [{title:"SmartScan",description:"A desktop document scanner"},
-    {title:"Rendezvous",description:"A large group coordination app"}, {title:"Sortify",description:"A spotify tool to sort songs based on desired genres"}];
+    {title:"Rendezvous",description:"A large group coordination app"}, {title:"Sortify",description:"A spotify tool to sort songs based on desired genres"},
+    {title:"TrailBack",description:"Offline hiking navigation app"}];
 
 const projectContainer = document.getElementById("project-container");
 projects.forEach(function(project){
@@ -54,4 +55,12 @@ const observer = new IntersectionObserver(function(entries){
 });
 hiddenElements.forEach(function(element){
     observer.observe(element);
+});
+
+const quoteButton= document.getElementById("inspire-button");
+const quoteText = document.getElementById("quote");
+quoteButton.addEventListener("click", async() =>{
+    const response = await fetch("https://api.quotable.io/random");
+    const data = await response.json();
+    quoteText.textContent = data.content;
 });
